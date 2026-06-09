@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_hanging_sign",
+  "textures": {
+    "particle": "mapletreemod:block/maple_planks"
+  }
+}

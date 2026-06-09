@@ -13,6 +13,9 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import net.minecraft.world.level.block.StandingSignBlock;
+import net.minecraft.world.level.block.WallSignBlock;
+
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, MapleTreeMod.MOD_ID, exFileHelper);
@@ -96,6 +99,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         pressurePlateBlock((PressurePlateBlock)
                         ModBlocks.MAPLE_PRESSURE_PLATE.get(),
                 blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+
+
+        signBlock(
+                (StandingSignBlock) ModBlocks.MAPLE_SIGN.get(),
+                (WallSignBlock) ModBlocks.MAPLE_WALL_SIGN.get(),
+                blockTexture(ModBlocks.MAPLE_PLANKS.get())
+        );
 
 
     }
