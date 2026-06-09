@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mapletreemod:block/maple_slab"
+    },
+    "type=double": {
+      "model": "mapletreemod:block/maple_planks"
+    },
+    "type=top": {
+      "model": "mapletreemod:block/maple_slab_top"
+    }
+  }
+}

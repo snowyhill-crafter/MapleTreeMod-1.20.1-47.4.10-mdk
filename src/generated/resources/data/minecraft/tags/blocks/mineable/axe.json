@@ -1,0 +1,16 @@
+{
+  "values": [
+    "mapletreemod:maple_slab",
+    "mapletreemod:maple_fence",
+    "mapletreemod:maple_fence_gate",
+    "mapletreemod:maple_door",
+    "mapletreemod:maple_trapdoor",
+    "mapletreemod:maple_stairs",
+    "mapletreemod:maple_button",
+    "mapletreemod:maple_pressure_plate",
+    "mapletreemod:maple_sign",
+    "mapletreemod:maple_wall_sign",
+    "mapletreemod:maple_hanging_sign",
+    "mapletreemod:maple_wall_hanging_sign"
+  ]
+}
