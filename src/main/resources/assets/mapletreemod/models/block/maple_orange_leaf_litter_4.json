@@ -1,0 +1,6 @@
+{
+  "parent": "mapletreemod:block/template_leaf_litter_4",
+  "textures": {
+    "texture": "mapletreemod:block/maple_orange_leaf_litter"
+    }
+}

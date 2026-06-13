@@ -1,8 +1,13 @@
 package com.snowyhill.mapletreemod;
 
 import com.mojang.logging.LogUtils;
+import com.snowyhill.mapletreemod.particle.ModParticleTypes;
 import com.snowyhill.mapletreemod.registry.*;
 
+import com.snowyhill.mapletreemod.worldgen.biome.ModOverworldRegion;
+import com.snowyhill.mapletreemod.worldgen.biome.ModSurfaceRuleData;
+import com.snowyhill.mapletreemod.worldgen.features.decorator.ModTreeDecorators;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -14,6 +19,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.Regions;
+import terrablender.api.SurfaceRuleManager;
 
 
 @Mod(MapleTreeMod.MOD_ID)
@@ -42,15 +49,25 @@ public class MapleTreeMod
         // ブロックレジストリをイベントバスに登録
         ModBlocks.BLOCKS.register(modEventBus);
 
+        ModParticleTypes.PARTICLES.register(modEventBus);
+
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+
+        ModTreeDecorators.TREE_DECORATORS.register(modEventBus);
         }
 
 
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(() -> {
+            Regions.register(new ModOverworldRegion(
+                    new ResourceLocation(MapleTreeMod.MOD_ID, "overworld"),5
+            ));
+         //   SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD,
+         //           MOD_ID, ModSurfaceRuleData.makeRules());
+        });
     }
 
 

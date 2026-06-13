@@ -19,10 +19,13 @@ public class JAJPLanguageProvider extends LanguageProvider {
     protected void addTranslations() {
 
         addBlock(ModBlocks.MAPLE_RED_SAPLING, "赤いカエデの苗木");
-        addBlock(ModBlocks.MAPLE_ORANGE_SAPLING, "橙のカエデの苗木");
+        addBlock(ModBlocks.MAPLE_ORANGE_SAPLING, "橙色カエデの苗木");
+        addBlock(ModBlocks.MAPLE_YELLOW_SAPLING, "黄色のカエデの苗木");
 
         addBlock(ModBlocks.MAPLE_RED_LEAVES, "赤いカエデの葉");
-        addBlock(ModBlocks.MAPLE_ORANGE_LEAVES, "橙のカエデの葉");
+        addBlock(ModBlocks.MAPLE_ORANGE_LEAVES, "橙色のカエデの葉");
+        addBlock(ModBlocks.MAPLE_YELLOW_LEAVES, "黄色のカエデの葉");
+
 
         addBlock(ModBlocks.MAPLE_LOG, "カエデの原木");
         addBlock(ModBlocks.STRIPPED_MAPLE_LOG, "樹皮を剥いだカエデの原木");

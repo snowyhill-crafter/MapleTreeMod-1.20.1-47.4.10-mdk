@@ -32,8 +32,12 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_MAPLE_ORANGE_TREE =
             createKey("add_maple_orange_tree");
 
+    public static final ResourceKey<BiomeModifier> ADD_MAPLE_YELLOW_TREE =
+            createKey("add_maple_yellow_tree");
+
     //バイオームに生成するメソッド
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
+/*
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         HolderGetter<Biome> biomes = context.lookup(Registries.BIOME);
 
@@ -61,6 +65,17 @@ public class ModBiomeModifiers {
                 )
         );
 
+        TagKey<Biome> MapleYellowTreeBiomeTag = TagKey.create(Registries.BIOME,
+                new ResourceLocation("mapletreemod", "maple_yellow_tree_spawnable"));
+
+        context.register(ADD_MAPLE_YELLOW_TREE,
+                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                        biomes.getOrThrow(MapleYellowTreeBiomeTag), // ✅ biomeタグとして扱う
+                        HolderSet.direct(placedFeatures.getOrThrow(ModPlacement.MAPLE_ORANGE_TREE)),
+                        GenerationStep.Decoration.VEGETAL_DECORATION
+                )
+        );
+*/
 
     }
 

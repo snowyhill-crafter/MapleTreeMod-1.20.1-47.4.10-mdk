@@ -41,7 +41,7 @@ public class ModBoatRenderer extends BoatRenderer {
 
     @Override
     public Pair<ResourceLocation, ListModel<Boat>> getModelWithLocation(Boat boat) {
-        // エンティティが持っているバリアント(APPLE or DARK_APPLE)を取得して、対応するリソースを返す
+        // エンティティが持っているバリアントを取得して、対応するリソースを返す
         if (boat instanceof ModBoatEntity modBoat) {
             return this.boatResources.get(modBoat.getModVariant());
         } else if (boat instanceof ModChestBoatEntity modChestBoat) {

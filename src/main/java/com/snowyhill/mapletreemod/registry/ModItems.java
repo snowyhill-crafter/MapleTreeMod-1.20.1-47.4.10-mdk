@@ -29,6 +29,9 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.MAPLE_ORANGE_SAPLING.get(), new Item.Properties())
     );
 
+    public static final RegistryObject<Item> MAPLE_YELLOW_SAPLING_ITEM = ITEMS.register("maple_yellow_sapling",
+            () -> new BlockItem(ModBlocks.MAPLE_YELLOW_SAPLING.get(), new Item.Properties())
+    );
 
     public static final RegistryObject<Item> MAPLE_LOG_ITEM = ITEMS.register(
             "maple_log",
@@ -123,6 +126,26 @@ public class ModItems {
             "maple_orange_leaves",
             () -> new BlockItem(ModBlocks.MAPLE_ORANGE_LEAVES.get(), new Item.Properties())
     );
+
+    public static final RegistryObject<Item> MAPLE_YELLOW_LEAVES_ITEM = ITEMS.register(
+            "maple_yellow_leaves",
+            () -> new BlockItem(ModBlocks.MAPLE_YELLOW_LEAVES.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> MAPLE_RED_LEAF_LITTER =
+            ITEMS.register("maple_red_leaf_litter",
+                    () -> new BlockItem(ModBlocks.MAPLE_RED_LEAF_LITTER.get(),
+                            new Item.Properties()));
+
+    public static final RegistryObject<Item> MAPLE_ORANGE_LEAF_LITTER =
+            ITEMS.register("maple_orange_leaf_litter",
+                    () -> new BlockItem(ModBlocks.MAPLE_ORANGE_LEAF_LITTER.get(),
+                            new Item.Properties()));
+
+    public static final RegistryObject<Item> MAPLE_YELLOW_LEAF_LITTER =
+            ITEMS.register("maple_yellow_leaf_litter",
+                    () -> new BlockItem(ModBlocks.MAPLE_YELLOW_LEAF_LITTER.get(),
+                            new Item.Properties()));
 
 
 

@@ -19,9 +19,11 @@ public class ENUSLanguageProvider extends LanguageProvider {
     protected void addTranslations() {
         addBlock(ModBlocks.MAPLE_RED_SAPLING, "Maple Red Saplings");
         addBlock(ModBlocks.MAPLE_ORANGE_SAPLING, "Maple Orange Saplings");
+        addBlock(ModBlocks.MAPLE_YELLOW_SAPLING, "Maple Yellow Saplings");
 
         addBlock(ModBlocks.MAPLE_RED_LEAVES, "Maple Red Leaves");
         addBlock(ModBlocks.MAPLE_ORANGE_LEAVES, "Maple Orange Leaves");
+        addBlock(ModBlocks.MAPLE_YELLOW_LEAVES, "Maple Yellow Leaves");
 
         addBlock(ModBlocks.MAPLE_LOG, "Maple Log");
         addBlock(ModBlocks.STRIPPED_MAPLE_LOG, "Stripped Maple Log");

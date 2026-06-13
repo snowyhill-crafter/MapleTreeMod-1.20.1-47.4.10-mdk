@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#mapletreemod:maple_yellow_tree_spawnable",
+  "features": "mapletreemod:maple_orange_tree",
+  "step": "vegetal_decoration"
+}

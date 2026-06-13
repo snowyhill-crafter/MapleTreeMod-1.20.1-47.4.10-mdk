@@ -28,34 +28,58 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 // --- 1) 苗木 ---
         ModelFile MapleRedSaplingModel = models()
-                .cross(regPath(ModBlocks.MAPLE_RED_SAPLING.get()), modLoc("block/maple_red_sapling"))
+                .cross(regPath(ModBlocks.MAPLE_RED_SAPLING.get()),
+                        modLoc("block/maple_red_sapling"))
                 .renderType("cutout");
         simpleBlock(ModBlocks.MAPLE_RED_SAPLING.get(), MapleRedSaplingModel);
 
 // --- 2) 鉢植え苗木 ---
         ModelFile MapleRedPottedModel = models()
-                .withExistingParent(regPath(ModBlocks.POTTED_MAPLE_RED_SAPLING.get()), mcLoc("block/flower_pot_cross"))
+                .withExistingParent(regPath(ModBlocks.POTTED_MAPLE_RED_SAPLING.get()),
+                        mcLoc("block/flower_pot_cross"))
                 .texture("plant", modLoc("block/maple_red_sapling"))
                 .renderType("cutout");
         simpleBlock(ModBlocks.POTTED_MAPLE_RED_SAPLING.get(), MapleRedPottedModel);
 
+
+
 // --- 1) 苗木 ---
         ModelFile MapleOrangeSaplingModel = models()
-                .cross(regPath(ModBlocks.MAPLE_ORANGE_SAPLING.get()), modLoc("block/maple_orange_sapling"))
+                .cross(regPath(ModBlocks.MAPLE_ORANGE_SAPLING.get()),
+                        modLoc("block/maple_orange_sapling"))
                 .renderType("cutout");
         simpleBlock(ModBlocks.MAPLE_ORANGE_SAPLING.get(), MapleOrangeSaplingModel);
 
 // --- 2) 鉢植え苗木 ---
         ModelFile MapleOrangePottedModel = models()
-                .withExistingParent(regPath(ModBlocks.POTTED_MAPLE_ORANGE_SAPLING.get()), mcLoc("block/flower_pot_cross"))
+                .withExistingParent(regPath(ModBlocks.POTTED_MAPLE_ORANGE_SAPLING.get()),
+                        mcLoc("block/flower_pot_cross"))
                 .texture("plant", modLoc("block/maple_orange_sapling"))
                 .renderType("cutout");
         simpleBlock(ModBlocks.POTTED_MAPLE_ORANGE_SAPLING.get(), MapleOrangePottedModel);
 
+
+
+        // --- 1) 苗木 ---
+        ModelFile MapleYellowSaplingModel = models()
+                .cross(regPath(ModBlocks.MAPLE_YELLOW_SAPLING.get()),
+                        modLoc("block/maple_yellow_sapling"))
+                .renderType("cutout");
+        simpleBlock(ModBlocks.MAPLE_YELLOW_SAPLING.get(), MapleYellowSaplingModel);
+
+// --- 2) 鉢植え苗木 ---
+        ModelFile MapleYellowPottedModel = models()
+                .withExistingParent(regPath(ModBlocks.POTTED_MAPLE_YELLOW_SAPLING.get()),
+                        mcLoc("block/flower_pot_cross"))
+                .texture("plant", modLoc("block/maple_yellow_sapling"))
+                .renderType("cutout");
+        simpleBlock(ModBlocks.POTTED_MAPLE_YELLOW_SAPLING.get(), MapleYellowPottedModel);
+
+
+
         simpleLeaves(ModBlocks.MAPLE_RED_LEAVES);
-
         simpleLeaves(ModBlocks.MAPLE_ORANGE_LEAVES);
-
+        simpleLeaves(ModBlocks.MAPLE_YELLOW_LEAVES);
 
         logBlock((RotatedPillarBlock) ModBlocks.MAPLE_LOG.get());
         item(ModBlocks.MAPLE_LOG);//ログブロックとアクシズブロックはアイテムモデルを自動生成しないし作っても消される。

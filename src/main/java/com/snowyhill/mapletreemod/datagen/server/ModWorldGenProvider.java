@@ -4,6 +4,7 @@ package com.snowyhill.mapletreemod.datagen.server;
 
 import com.snowyhill.mapletreemod.MapleTreeMod;
 import com.snowyhill.mapletreemod.worldgen.biome.ModBiomeModifiers;
+import com.snowyhill.mapletreemod.worldgen.biome.ModBiomes;
 import com.snowyhill.mapletreemod.worldgen.features.ModFeatures;
 import com.snowyhill.mapletreemod.worldgen.placement.ModPlacement;
 import net.minecraft.core.HolderLookup;
@@ -20,8 +21,8 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     private static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, ModFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacement::bootstap)
-            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
-
+            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
+            .add(Registries.BIOME, ModBiomes::bootstrap); //terrablender対応
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(MapleTreeMod.MOD_ID));
     }

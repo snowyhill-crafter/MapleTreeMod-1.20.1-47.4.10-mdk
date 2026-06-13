@@ -70,7 +70,8 @@ public  class ModBlockTagsProvider extends BlockTagsProvider {
 
         this.tag(BlockTags.SAPLINGS).add(
                 ModBlocks.MAPLE_RED_SAPLING.get(),
-                ModBlocks.MAPLE_ORANGE_SAPLING.get()
+                ModBlocks.MAPLE_ORANGE_SAPLING.get(),
+                ModBlocks.MAPLE_YELLOW_SAPLING.get()
         );
 
 

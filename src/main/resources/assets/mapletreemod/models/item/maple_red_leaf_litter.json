@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mapletreemod:item/maple_red_leaf_litter"
+  }
+}

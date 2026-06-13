@@ -20,14 +20,17 @@ public class ModBiomeTagsProvider extends BiomeTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(ModBiomeTags.
-                MAPLE_RED_TREE_SPAWNABLE)
-                .add(Biomes.FOREST);
+        //tag(ModBiomeTags.
+               // MAPLE_RED_TREE_SPAWNABLE)
+               // .add(Biomes.FOREST);
 
+       // tag(ModBiomeTags.
+              //  MAPLE_ORANGE_TREE_SPAWNABLE)
+               // .add(Biomes.FOREST);
 
-        tag(ModBiomeTags.
-                MAPLE_ORANGE_TREE_SPAWNABLE)
-                .add(Biomes.FOREST);
+      //  tag(ModBiomeTags.
+             //   MAPLE_YELLOW_TREE_SPAWNABLE)
+             //   .add(Biomes.FOREST);
     }
 
 }

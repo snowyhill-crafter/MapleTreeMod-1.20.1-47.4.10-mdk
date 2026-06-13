@@ -40,7 +40,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.POTTED_MAPLE_ORANGE_SAPLING.get(),
                 pottedPlantLoot(ModBlocks.MAPLE_ORANGE_SAPLING.get()));
 
+        this.dropSelf(ModBlocks.MAPLE_YELLOW_SAPLING.get());
 
+        this.add(ModBlocks.POTTED_MAPLE_YELLOW_SAPLING.get(),
+                pottedPlantLoot(ModBlocks.MAPLE_YELLOW_SAPLING.get()));
+        
+        
         this.dropSelf(ModBlocks.MAPLE_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_MAPLE_LOG.get());
         this.dropSelf(ModBlocks.MAPLE_WOOD.get());
@@ -138,6 +143,37 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         )
                 )
         );
+
+        this.add(ModBlocks.MAPLE_YELLOW_LEAVES.get(), LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(ModBlocks.MAPLE_YELLOW_LEAVES.get())
+                                .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS)))
+                        )
+                )
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(ModBlocks.MAPLE_YELLOW_SAPLING.get())
+                                .when(LootItemRandomChanceCondition.randomChance(0.05f))
+                                .when(
+                                        InvertedLootItemCondition.invert(
+                                                MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS))
+                                        )
+                                )
+                        )
+                )
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(Items.STICK)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2)))
+                                .when(LootItemRandomChanceCondition.randomChance(0.02f))
+                                .when(
+                                        InvertedLootItemCondition.invert(
+                                                MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS))
+                                        )
+                                )
+                        )
+                )
+        );
+        
+        
     }
 
     @Override

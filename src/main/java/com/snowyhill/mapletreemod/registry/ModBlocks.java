@@ -3,8 +3,10 @@ package com.snowyhill.mapletreemod.registry;
 import com.snowyhill.mapletreemod.MapleTreeMod;
 import com.snowyhill.mapletreemod.block.*;
 import com.snowyhill.mapletreemod.client.ModWoodTypes;
+import com.snowyhill.mapletreemod.particle.ModParticleTypes;
 import com.snowyhill.mapletreemod.worldgen.tree.MapleOrangeTreeGrower;
 import com.snowyhill.mapletreemod.worldgen.tree.MapleRedTreeGrower;
+import com.snowyhill.mapletreemod.worldgen.tree.MapleYellowTreeGrower;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -39,6 +41,18 @@ public class ModBlocks {
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT,
                     ModBlocks.MAPLE_ORANGE_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
+
+    public static final RegistryObject<Block> MAPLE_YELLOW_SAPLING = BLOCKS.register(
+            "maple_yellow_sapling",
+            () -> new SaplingBlock(new MapleYellowTreeGrower(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> POTTED_MAPLE_YELLOW_SAPLING = BLOCKS.register(
+            "potted_maple_yellow_sapling",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT,
+                    ModBlocks.MAPLE_YELLOW_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
+
 
     public static final RegistryObject<Block> MAPLE_LOG = BLOCKS.register("maple_log",
             () -> new ModStrippableLogBlock(
@@ -156,21 +170,51 @@ public class ModBlocks {
                     ModWoodTypes.MAPLE
             ));
 
-    //public static final RegistryObject<Block> MAPLE_BED = BLOCKS.register("maple_bed",
-            //CoconutPalmBedBlock::new);
 
     public static final RegistryObject<Block> MAPLE_RED_LEAVES = BLOCKS.register(
             "maple_red_leaves",
-            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).randomTicks()));
+            () -> new MapleLeavesBlock(
+                    ModParticleTypes.MAPLE_RED_LEAF,
+                    BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).randomTicks()
+            )
+    );
 
     public static final RegistryObject<Block> MAPLE_ORANGE_LEAVES = BLOCKS.register(
             "maple_orange_leaves",
-            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).randomTicks()));
+            () -> new MapleLeavesBlock(
+                    ModParticleTypes.MAPLE_ORANGE_LEAF,
+                    BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).randomTicks()
+            )
+    );
 
+    public static final RegistryObject<Block> MAPLE_YELLOW_LEAVES = BLOCKS.register(
+            "maple_yellow_leaves",
+            () -> new MapleLeavesBlock(
+                    ModParticleTypes.MAPLE_YELLOW_LEAF,
+                    BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).randomTicks()
+            )
+    );
 
+    public static final RegistryObject<Block> MAPLE_RED_LEAF_LITTER = BLOCKS.register(
+            "maple_red_leaf_litter",
+            () -> new MapleLeafLitterBlock(
+                    BlockBehaviour.Properties.copy(Blocks.PINK_PETALS)
+            )
+    );
 
+    public static final RegistryObject<Block> MAPLE_ORANGE_LEAF_LITTER = BLOCKS.register(
+            "maple_orange_leaf_litter",
+            () -> new MapleLeafLitterBlock(
+                    BlockBehaviour.Properties.copy(Blocks.PINK_PETALS)
+            )
+    );
 
-
+    public static final RegistryObject<Block> MAPLE_YELLOW_LEAF_LITTER = BLOCKS.register(
+            "maple_yellow_leaf_litter",
+            () -> new MapleLeafLitterBlock(
+                    BlockBehaviour.Properties.copy(Blocks.PINK_PETALS)
+            )
+    );
 
 
     // イベントバスに登録

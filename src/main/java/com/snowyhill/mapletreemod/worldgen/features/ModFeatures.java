@@ -3,6 +3,7 @@ package com.snowyhill.mapletreemod.worldgen.features;
 import com.snowyhill.mapletreemod.MapleTreeMod;
 import com.snowyhill.mapletreemod.registry.ModBlocks;
 
+import com.snowyhill.mapletreemod.worldgen.features.decorator.MapleLeafLitterDecorator;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -19,6 +20,9 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlac
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+
+import java.util.List;
+
 import static net.minecraft.data.worldgen.features.FeatureUtils.createKey;
 
 public class ModFeatures {
@@ -29,6 +33,8 @@ public class ModFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_ORANGE_TREE_KEY =
             registerKey("maple_orange_tree");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_YELLOW_TREE_KEY =
+            registerKey("maple_yellow_tree");
 
     public static void bootstrap(BootstapContext<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>> context) {
 
@@ -40,17 +46,20 @@ public class ModFeatures {
                         ),
                         new StraightTrunkPlacer(
                                 5, // 基本幹の高さ
-                                1, // 一番下の曲がり高さ
-                                1  // 分岐数（自然な分岐感）
+                                1, //
+                                2  //
                         ),
                         BlockStateProvider.simple(ModBlocks.MAPLE_RED_LEAVES.get()),
                         new BlobFoliagePlacer(
                                 ConstantInt.of(3), // 半径
-                                ConstantInt.of(2), // 高さオフセット
-                                4                  // 葉の高さ
+                                ConstantInt.of(0), // 高さオフセット
+                                3                  // 葉の下部の大きさ
                         ),
-                        new TwoLayersFeatureSize(1, 0, 2)
-                ).ignoreVines().build()
+                        new TwoLayersFeatureSize(1, 0, 2))
+                        .decorators(List.of(
+                                new MapleLeafLitterDecorator(ModBlocks.MAPLE_RED_LEAF_LITTER.get())
+                        ))
+                        .ignoreVines().build()
         );
 
         FeatureUtils.register(context, MAPLE_ORANGE_TREE_KEY, Feature.TREE,
@@ -60,18 +69,50 @@ public class ModFeatures {
                         ),
                         new StraightTrunkPlacer(
                                 5, // 基本幹の高さ
-                                1, // 一番下の曲がり高さ
-                                1  // 分岐数（自然な分岐感）
+                                1, //
+                                2  //
                         ),
                         BlockStateProvider.simple(ModBlocks.MAPLE_ORANGE_LEAVES.get()),
                         new BlobFoliagePlacer(
                                 ConstantInt.of(3), // 半径
-                                ConstantInt.of(2), // 高さオフセット
-                                4                  // 葉の高さ
+                                ConstantInt.of(0), // 高さオフセット
+                                3                  // 葉の下部の大きさ
+                        ),
+                        new TwoLayersFeatureSize(1, 0, 2))
+                .decorators(List.of(
+                new MapleLeafLitterDecorator(ModBlocks.MAPLE_ORANGE_LEAF_LITTER.get())
+                ))
+                .ignoreVines().build()
+        );
+
+        FeatureUtils.register(context, MAPLE_YELLOW_TREE_KEY, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(ModBlocks.MAPLE_LOG.get()
+
+                        ),
+                        new StraightTrunkPlacer(
+                                5, // 基本幹の高さ
+                                1, //
+                                2  //
+                        ),
+                        BlockStateProvider.simple(ModBlocks.MAPLE_YELLOW_LEAVES.get()),
+                        new BlobFoliagePlacer(
+                                ConstantInt.of(3), // 半径
+                                ConstantInt.of(0), // 高さオフセット
+                                3                  // 葉の下部の大きさ
                         ),
                         new TwoLayersFeatureSize(1, 0, 2)
-                ).ignoreVines().build()
+                )
+                        .decorators(List.of(
+                                new MapleLeafLitterDecorator(ModBlocks.MAPLE_YELLOW_LEAF_LITTER.get())
+                                ))
+                        .ignoreVines()
+                                        .build()
         );
+
+
+
+
     }
 
 

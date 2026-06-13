@@ -24,6 +24,7 @@ public class ModTabs {
 
                         pOutput.accept(ModItems.MAPLE_RED_SAPLING_ITEM.get());
                         pOutput.accept(ModItems.MAPLE_ORANGE_SAPLING_ITEM.get());
+                        pOutput.accept(ModItems.MAPLE_YELLOW_SAPLING_ITEM.get());
                         pOutput.accept(ModItems.MAPLE_LOG_ITEM.get());
                         pOutput.accept(ModItems.MAPLE_LOG_ITEM.get());
                         pOutput.accept(ModItems.STRIPPED_MAPLE_LOG_ITEM.get());
@@ -46,7 +47,10 @@ public class ModTabs {
                         pOutput.accept(ModItems.MAPLE_CHEST_BOAT.get());
                         pOutput.accept(ModItems.MAPLE_RED_LEAVES_ITEM.get());
                         pOutput.accept(ModItems.MAPLE_ORANGE_LEAVES_ITEM.get());
-                        
+                        pOutput.accept(ModItems.MAPLE_YELLOW_LEAVES_ITEM.get());
+                        pOutput.accept(ModItems.MAPLE_RED_LEAF_LITTER.get());
+                        pOutput.accept(ModItems.MAPLE_ORANGE_LEAF_LITTER.get());
+                        pOutput.accept(ModItems.MAPLE_YELLOW_LEAF_LITTER.get());
                     }))
                     .build());
 
