@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "T": {
+      "tag": "minecraft:trapdoors"
+    }
+  },
+  "pattern": [
+    " T ",
+    "SIS",
+    "SSS"
+  ],
+  "result": {
+    "item": "mapletreemod:sap_collector"
+  },
+  "show_notification": true
+}

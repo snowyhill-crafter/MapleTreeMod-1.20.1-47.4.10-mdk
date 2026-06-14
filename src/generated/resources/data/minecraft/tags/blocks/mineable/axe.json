@@ -11,6 +11,7 @@
     "mapletreemod:maple_sign",
     "mapletreemod:maple_wall_sign",
     "mapletreemod:maple_hanging_sign",
-    "mapletreemod:maple_wall_hanging_sign"
+    "mapletreemod:maple_wall_hanging_sign",
+    "mapletreemod:sap_collector"
   ]
 }

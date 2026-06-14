@@ -17,15 +17,20 @@ public class ENUSLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        addBlock(ModBlocks.MAPLE_RED_SAPLING, "Maple Red Saplings");
-        addBlock(ModBlocks.MAPLE_ORANGE_SAPLING, "Maple Orange Saplings");
-        addBlock(ModBlocks.MAPLE_YELLOW_SAPLING, "Maple Yellow Saplings");
+        addBlock(ModBlocks.MAPLE_RED_SAPLING, "Red Maple Saplings");
+        addBlock(ModBlocks.MAPLE_ORANGE_SAPLING, "Orange Maple Saplings");
+        addBlock(ModBlocks.MAPLE_YELLOW_SAPLING, "Yellow Maple Saplings");
 
-        addBlock(ModBlocks.MAPLE_RED_LEAVES, "Maple Red Leaves");
-        addBlock(ModBlocks.MAPLE_ORANGE_LEAVES, "Maple Orange Leaves");
-        addBlock(ModBlocks.MAPLE_YELLOW_LEAVES, "Maple Yellow Leaves");
+        addBlock(ModBlocks.MAPLE_RED_LEAVES, "Red Maple Leaves");
+        addBlock(ModBlocks.MAPLE_ORANGE_LEAVES, "Orange Maple Leaves");
+        addBlock(ModBlocks.MAPLE_YELLOW_LEAVES, "Yellow Maple Leaves");
+
+        addBlock(ModBlocks.MAPLE_RED_LEAF_LITTER, "Red Maple Leaf Litter");
+        addBlock(ModBlocks.MAPLE_ORANGE_LEAF_LITTER, "Orange Maple Leaf Litter");
+        addBlock(ModBlocks.MAPLE_YELLOW_LEAF_LITTER, "Yellow Maple Leaf Litter");
 
         addBlock(ModBlocks.MAPLE_LOG, "Maple Log");
+        addBlock(ModBlocks.MAPLE_SAP_LOG, "Maple ");
         addBlock(ModBlocks.STRIPPED_MAPLE_LOG, "Stripped Maple Log");
         addBlock(ModBlocks.MAPLE_WOOD, "Maple Wood");
         addBlock(ModBlocks.STRIPPED_MAPLE_WOOD, "Stripped Maple Wood");
@@ -46,7 +51,11 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addItem(ModItems.MAPLE_BOAT, "Maple Boat");
         addItem(ModItems.MAPLE_CHEST_BOAT, "Maple Chest Boat");
 
-
+        addBlock(ModBlocks.SAP_COLLECTOR, "Sap Collector");
+        addItem(ModItems.MAPLE_SAP_BOTTLE, "Maple Sap Bottle");
+        addItem(ModItems.MAPLE_SYRUP_BOTTLE, "Maple Syrup Bottle");
+        addItem(ModItems.MAPLE_TAFFY, "Maple Taffy");
+        addBlock(ModBlocks.MAPLE_PANCAKE, "Maple Pancake");
 
         addEntityType(ModEntities.MOD_CHEST_BOAT, "Boat with Chest");
         add("creativetabs.Mod_tab", "mapletreemod");

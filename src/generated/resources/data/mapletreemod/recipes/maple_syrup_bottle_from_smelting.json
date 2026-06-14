@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "mapletreemod:maple_sap_bottle"
+  },
+  "result": "mapletreemod:maple_syrup_bottle"
+}

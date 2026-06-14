@@ -47,6 +47,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         
         
         this.dropSelf(ModBlocks.MAPLE_LOG.get());
+        // MAPLE_SAP_LOG: 破壊時にMAPLE_LOGをドロップ
+        this.add(ModBlocks.MAPLE_SAP_LOG.get(), LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(ModBlocks.MAPLE_LOG.get()))
+                )
+        );
         this.dropSelf(ModBlocks.STRIPPED_MAPLE_LOG.get());
         this.dropSelf(ModBlocks.MAPLE_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_MAPLE_WOOD.get());
@@ -172,8 +178,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         )
                 )
         );
-        
-        
+
+        this.dropSelf(ModBlocks.SAP_COLLECTOR.get());
+        this.add(ModBlocks.MAPLE_PANCAKE.get(), LootTable.lootTable());
     }
 
     @Override

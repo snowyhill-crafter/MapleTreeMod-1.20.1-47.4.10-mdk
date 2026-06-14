@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north,fill_level=0":  { "model": "mapletreemod:block/sap_collector", "y": 180 },
+    "facing=north,fill_level=1":  { "model": "mapletreemod:block/maple_sap_collector_1", "y": 180 },
+    "facing=north,fill_level=2":  { "model": "mapletreemod:block/maple_sap_collector_2", "y": 180 },
+    "facing=north,fill_level=3":  { "model": "mapletreemod:block/maple_sap_collector_3", "y": 180 },
+
+    "facing=east,fill_level=0":  { "model": "mapletreemod:block/sap_collector", "y": 270 },
+    "facing=east,fill_level=1":  { "model": "mapletreemod:block/maple_sap_collector_1", "y": 270 },
+    "facing=east,fill_level=2":  { "model": "mapletreemod:block/maple_sap_collector_2", "y": 270 },
+    "facing=east,fill_level=3":  { "model": "mapletreemod:block/maple_sap_collector_3", "y": 270 },
+
+    "facing=south,fill_level=0":  { "model": "mapletreemod:block/sap_collector", "y": 0 },
+    "facing=south,fill_level=1":  { "model": "mapletreemod:block/maple_sap_collector_1", "y": 0 },
+    "facing=south,fill_level=2":  { "model": "mapletreemod:block/maple_sap_collector_2", "y": 0 },
+    "facing=south,fill_level=3":  { "model": "mapletreemod:block/maple_sap_collector_3", "y": 0 },
+
+    "facing=west,fill_level=0":  { "model": "mapletreemod:block/sap_collector", "y": 90 },
+    "facing=west,fill_level=1":  { "model": "mapletreemod:block/maple_sap_collector_1", "y": 90 },
+    "facing=west,fill_level=2":  { "model": "mapletreemod:block/maple_sap_collector_2", "y": 90 },
+    "facing=west,fill_level=3":  { "model": "mapletreemod:block/maple_sap_collector_3", "y": 90 }
+  }
+}

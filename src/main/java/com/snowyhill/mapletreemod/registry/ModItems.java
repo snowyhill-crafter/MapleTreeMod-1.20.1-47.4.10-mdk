@@ -5,10 +5,9 @@ import com.snowyhill.mapletreemod.MapleTreeMod;
 import com.snowyhill.mapletreemod.entity.ModBoatEntity;
 
 import com.snowyhill.mapletreemod.item.ModBoatItem;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.HangingSignItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SignItem;
+import com.snowyhill.mapletreemod.item.SapCollectorItem;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -36,6 +35,11 @@ public class ModItems {
     public static final RegistryObject<Item> MAPLE_LOG_ITEM = ITEMS.register(
             "maple_log",
             () -> new BlockItem(ModBlocks.MAPLE_LOG.get(), new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> MAPLE_SAP_LOG_ITEM = ITEMS.register(
+            "maple_sap_log",
+            () -> new BlockItem(ModBlocks.MAPLE_SAP_LOG.get(), new Item.Properties())
     );
 
     public static final RegistryObject<Item> STRIPPED_MAPLE_LOG_ITEM = ITEMS.register(
@@ -147,7 +151,42 @@ public class ModItems {
                     () -> new BlockItem(ModBlocks.MAPLE_YELLOW_LEAF_LITTER.get(),
                             new Item.Properties()));
 
+    public static final RegistryObject<Item> SAP_COLLECTOR_ITEM = ITEMS.register(
+            "sap_collector",
+            () -> new SapCollectorItem(ModBlocks.SAP_COLLECTOR.get(), new Item.Properties())
+    );
 
+    public static final RegistryObject<Item> MAPLE_SAP_BOTTLE = ITEMS.register(
+            "maple_sap_bottle",
+            () -> new Item(new Item.Properties()
+                    .craftRemainder(Items.GLASS_BOTTLE)//クラフト後にボトルが残る
+                    .stacksTo(16)
+            )
+    );
+
+    public static final RegistryObject<Item> MAPLE_SYRUP_BOTTLE = ITEMS.register(
+            "maple_syrup_bottle",
+            () -> new Item(new Item.Properties()
+                    .craftRemainder(Items.GLASS_BOTTLE)//クラフト後にボトルが残る
+                    .stacksTo(16)
+            )
+    );
+
+    public static final RegistryObject<Item> MAPLE_TAFFY = ITEMS.register(
+            "maple_taffy",
+            () -> new Item(new Item.Properties()
+                    .food(new FoodProperties.Builder()
+                            .nutrition(2)          // 満腹度 +2（肉1個分）
+                            .saturationMod(0.2F)   // 隠し満腹度
+                            .fast()                // お菓子なので即食べられる
+                            .build())
+            )
+    );
+
+    public static final RegistryObject<Item> MAPLE_PANCAKE_ITEM = ITEMS.register("maple_pancake",
+            () -> new BlockItem(ModBlocks.MAPLE_PANCAKE.get(), new Item.Properties()
+                    .stacksTo(1)
+            ));
 
 
     public static void register(IEventBus eventBus) {

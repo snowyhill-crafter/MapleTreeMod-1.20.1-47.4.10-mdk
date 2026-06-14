@@ -57,6 +57,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         sapling(ModBlocks.MAPLE_RED_SAPLING);
         sapling(ModBlocks.MAPLE_ORANGE_SAPLING);
         sapling(ModBlocks.MAPLE_YELLOW_SAPLING);
+
+        basicItem(ModItems.MAPLE_SAP_BOTTLE.get());
+        basicItem(ModItems.MAPLE_SYRUP_BOTTLE.get());
+        basicItem(ModItems.MAPLE_TAFFY.get());
     }
 
     public void itemWithBlock(RegistryObject<Block> block) {

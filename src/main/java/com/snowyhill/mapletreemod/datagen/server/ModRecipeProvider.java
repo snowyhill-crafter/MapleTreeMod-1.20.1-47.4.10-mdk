@@ -7,11 +7,13 @@ import com.snowyhill.mapletreemod.registry.ModItems;
 import com.snowyhill.mapletreemod.tag.ModTags;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.Tags;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -27,6 +29,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     //1.20.6protected void buildRecipes(RecipeOutput pRecipeOutput)
+    //ModItems,ModBlocksには.get()が必要
     protected void buildRecipes(Consumer<FinishedRecipe> pRecipeOutput)  {
             
     woodFromLogs(pRecipeOutput, ModBlocks.MAPLE_WOOD.get(),
@@ -92,6 +95,66 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_stripped_apple_log", has(ModBlocks.STRIPPED_MAPLE_LOG.get()))
                 .save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SAP_COLLECTOR.get())
+                .pattern(" T ")
+                .pattern("SIS")
+                .pattern("SSS")
+                .define('T', ItemTags.TRAPDOORS)
+                .define('I', Items.IRON_INGOT)
+                .define('S', ItemTags.WOODEN_SLABS)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .save(pRecipeOutput);
+
+
+        SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(ModItems.MAPLE_SAP_BOTTLE.get()),
+                        RecipeCategory.FOOD,
+                        ModItems.MAPLE_SYRUP_BOTTLE.get(),
+                        0.35F,
+                        200
+                )
+                .unlockedBy("has_maple_sap_bottle", has(ModItems.MAPLE_SAP_BOTTLE.get()))
+                .save(pRecipeOutput, MapleTreeMod.MOD_ID + ":maple_syrup_bottle_from_smelting");
+
+        /* ビンをどうするか決める
+        SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(ModItems.MAPLE_SYRUP_BOTTLE.get()),
+                        RecipeCategory.FOOD,
+                        Items.SUGAR,
+                        0.35F,
+                        200
+                )
+                .unlockedBy("has_maple_syrup_bottle", has(ModItems.MAPLE_SYRUP_BOTTLE.get()))
+                .save(pRecipeOutput, MapleTreeMod.MOD_ID + ":sugar_from_smelting");
+*/
+
+        ShapelessRecipeBuilder.shapeless(
+                        RecipeCategory.FOOD,
+                        ModItems.MAPLE_TAFFY.get(),
+                        3
+                )
+                .requires(ModItems.MAPLE_SYRUP_BOTTLE.get())
+                .requires(Items.SNOWBALL)
+                .requires(Items.STICK)
+                .unlockedBy(
+                        "has_maple_syrup_bottle",
+                        has(ModItems.MAPLE_SYRUP_BOTTLE.get())
+                )
+                .save(pRecipeOutput);
+
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModBlocks.MAPLE_PANCAKE.get())
+                .pattern("MMM")
+                .pattern("SES")
+                .pattern("WWW")
+                .define('M', ModItems.MAPLE_SYRUP_BOTTLE.get())
+                .define('S', Items.SUGAR)
+                .define('E', Items.EGG)
+                .define('W', Items.WHEAT)
+                .unlockedBy("has_maple_syrup_bottle", has(ModItems.MAPLE_SYRUP_BOTTLE.get()))
+                .save(pRecipeOutput);
 
 
     }

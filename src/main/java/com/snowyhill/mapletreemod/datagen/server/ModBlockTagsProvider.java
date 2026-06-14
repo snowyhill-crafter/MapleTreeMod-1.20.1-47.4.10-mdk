@@ -36,7 +36,8 @@ public  class ModBlockTagsProvider extends BlockTagsProvider {
 
         this.tag(BlockTags.LOGS)
                 .add(
-                        ModBlocks.MAPLE_LOG.get()
+                        ModBlocks.MAPLE_LOG.get(),
+                        ModBlocks.MAPLE_SAP_LOG.get()
                 );
 
 
@@ -44,6 +45,7 @@ public  class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(ModTags.Blocks.MAPLE_LOG)
                 .add(
                         ModBlocks.MAPLE_LOG.get(),
+                        ModBlocks.MAPLE_SAP_LOG.get(),
                         ModBlocks.STRIPPED_MAPLE_LOG.get(),
                         ModBlocks.MAPLE_WOOD.get(),
                         ModBlocks.STRIPPED_MAPLE_WOOD.get()
@@ -65,7 +67,9 @@ public  class ModBlockTagsProvider extends BlockTagsProvider {
                 ModBlocks.MAPLE_SIGN.get(),
                 ModBlocks.MAPLE_WALL_SIGN.get(),
                 ModBlocks.MAPLE_HANGING_SIGN.get(),
-                ModBlocks.MAPLE_WALL_HANGING_SIGN.get()
+                ModBlocks.MAPLE_WALL_HANGING_SIGN.get(),
+
+                ModBlocks.SAP_COLLECTOR.get()
         );
 
         this.tag(BlockTags.SAPLINGS).add(

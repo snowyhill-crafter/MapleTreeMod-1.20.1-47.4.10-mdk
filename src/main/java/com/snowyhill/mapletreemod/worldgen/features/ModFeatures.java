@@ -9,8 +9,10 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
 
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 
@@ -19,6 +21,7 @@ import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSi
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 
 import java.util.List;
@@ -41,8 +44,9 @@ public class ModFeatures {
 
         FeatureUtils.register(context, MAPLE_RED_TREE_KEY, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(ModBlocks.MAPLE_LOG.get()
-
+                        new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                                .add(ModBlocks.MAPLE_LOG.get().defaultBlockState(), 7)    // 大半をこっち
+                                .add(ModBlocks.MAPLE_SAP_LOG.get().defaultBlockState(), 1) // 1割くらい（調整可）
                         ),
                         new StraightTrunkPlacer(
                                 5, // 基本幹の高さ
@@ -64,8 +68,9 @@ public class ModFeatures {
 
         FeatureUtils.register(context, MAPLE_ORANGE_TREE_KEY, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(ModBlocks.MAPLE_LOG.get()
-
+                        new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                                .add(ModBlocks.MAPLE_LOG.get().defaultBlockState(), 7)    // 大半をこっち
+                                .add(ModBlocks.MAPLE_SAP_LOG.get().defaultBlockState(), 1) // 1割くらい（調整可）
                         ),
                         new StraightTrunkPlacer(
                                 5, // 基本幹の高さ
@@ -87,7 +92,9 @@ public class ModFeatures {
 
         FeatureUtils.register(context, MAPLE_YELLOW_TREE_KEY, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
-                        BlockStateProvider.simple(ModBlocks.MAPLE_LOG.get()
+                        new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+                                .add(ModBlocks.MAPLE_LOG.get().defaultBlockState(), 7)    // 大半をこっち
+                                .add(ModBlocks.MAPLE_SAP_LOG.get().defaultBlockState(), 1) // 1割くらい（調整可）
 
                         ),
                         new StraightTrunkPlacer(

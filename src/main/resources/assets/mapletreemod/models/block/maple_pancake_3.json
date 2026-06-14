@@ -1,0 +1,24 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "mapletreemod:block/maple_pancake_top",
+    "top":      "mapletreemod:block/maple_pancake_top",
+    "bottom":   "mapletreemod:block/maple_pancake_bottom",
+    "side":     "mapletreemod:block/maple_pancake_side",
+    "inner":    "mapletreemod:block/maple_pancake_inner"
+  },
+  "elements": [
+    {
+      "from": [1, 0, 1],
+      "to":   [8, 8, 8],
+      "faces": {
+        "up":    { "texture": "#top" },
+        "down":  { "texture": "#bottom" },
+        "north": { "texture": "#side" },
+        "west":  { "texture": "#side" },
+        "east":  { "texture": "#inner" },
+        "south": { "texture": "#inner" }
+      }
+    }
+  ]
+}

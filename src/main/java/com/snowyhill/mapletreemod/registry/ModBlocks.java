@@ -60,6 +60,15 @@ public class ModBlocks {
                     () -> ModBlocks.STRIPPED_MAPLE_LOG.get()
             )
     );
+
+    public static final RegistryObject<Block> MAPLE_SAP_LOG = BLOCKS.register("maple_sap_log",
+            () -> new ModStrippableLogBlock(
+                    BlockBehaviour.Properties.copy(Blocks.OAK_LOG),
+                    () -> ModBlocks.STRIPPED_MAPLE_LOG.get()
+            )
+    );
+
+
     // 樹皮はがし後（stripped）原木
     public static final RegistryObject<Block> STRIPPED_MAPLE_LOG = BLOCKS.register("stripped_maple_log",
             () -> new ModLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG))
@@ -215,6 +224,21 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.PINK_PETALS)
             )
     );
+
+    public static final RegistryObject<Block> SAP_COLLECTOR = BLOCKS.register(
+            "sap_collector",
+            () -> new SapCollectorBlock(
+                    BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)
+                            .randomTicks()   // ←この指定が必須！
+            )
+    );
+
+    public static final RegistryObject<Block> MAPLE_PANCAKE = BLOCKS.register("maple_pancake",
+            () -> new MaplePancakeBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).noOcclusion()));
+
+
+
+
 
 
     // イベントバスに登録

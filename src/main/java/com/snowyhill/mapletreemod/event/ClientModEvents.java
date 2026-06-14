@@ -42,7 +42,7 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-
+//テクスチャの透明を使ったモデルに必要な処置
             ItemBlockRenderTypes.setRenderLayer(
                     ModBlocks.MAPLE_RED_LEAF_LITTER.get(),
                     RenderType.cutout()
@@ -57,6 +57,12 @@ public class ClientModEvents {
                     ModBlocks.MAPLE_YELLOW_LEAF_LITTER.get(),
                     RenderType.cutout()
             );
+
+            ItemBlockRenderTypes.setRenderLayer(
+                    ModBlocks.SAP_COLLECTOR.get(),
+                    RenderType.translucent() //半透明を指定
+            );
+
         });
     }
 
