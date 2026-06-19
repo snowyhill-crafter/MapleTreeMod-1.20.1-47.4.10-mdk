@@ -99,7 +99,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern(" T ")
                 .pattern("SIS")
                 .pattern("SSS")
-                .define('T', ItemTags.TRAPDOORS)
+                .define('T', ItemTags.WOODEN_TRAPDOORS)
                 .define('I', Items.IRON_INGOT)
                 .define('S', ItemTags.WOODEN_SLABS)
                 .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
@@ -116,17 +116,17 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_maple_sap_bottle", has(ModItems.MAPLE_SAP_BOTTLE.get()))
                 .save(pRecipeOutput, MapleTreeMod.MOD_ID + ":maple_syrup_bottle_from_smelting");
 
-        /* ビンをどうするか決める
-        SimpleCookingRecipeBuilder.smelting(
-                        Ingredient.of(ModItems.MAPLE_SYRUP_BOTTLE.get()),
-                        RecipeCategory.FOOD,
-                        Items.SUGAR,
-                        0.35F,
-                        200
-                )
-                .unlockedBy("has_maple_syrup_bottle", has(ModItems.MAPLE_SYRUP_BOTTLE.get()))
-                .save(pRecipeOutput, MapleTreeMod.MOD_ID + ":sugar_from_smelting");
-*/
+        // ビンをどうするか決める
+        //SimpleCookingRecipeBuilder.smelting(
+        //                Ingredient.of(ModItems.MAPLE_SYRUP_BOTTLE.get()),
+        //                RecipeCategory.FOOD,
+        //                Items.SUGAR,
+        //                0.35F,
+        //                200
+        //        )
+        //        .unlockedBy("has_maple_syrup_bottle", has(ModItems.MAPLE_SYRUP_BOTTLE.get()))
+        //        .save(pRecipeOutput, MapleTreeMod.MOD_ID + ":sugar_from_smelting");
+
 
         ShapelessRecipeBuilder.shapeless(
                         RecipeCategory.FOOD,

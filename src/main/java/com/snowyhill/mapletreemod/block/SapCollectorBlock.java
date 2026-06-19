@@ -35,10 +35,32 @@ public class SapCollectorBlock extends Block {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        // 通常の設置は不可（クラッシュ防止用・すべてnull返し）
-        return null;
-    }
+        Direction clickedFace = context.getClickedFace();
 
+        // 上下には設置不可
+        if (clickedFace.getAxis().isVertical()) {
+            return null;
+        }
+
+        BlockState clickedState = context.getLevel().getBlockState(context.getClickedPos());
+
+        // クリック先が樹液原木でなければ不可
+        if (!clickedState.is(ModBlocks.MAPLE_SAP_LOG.get())) {
+            return null;
+        }
+
+        // 樹液が出ている面
+        Direction sapFacing = clickedState.getValue(MapleSapLogBlock.FACING);
+
+        // クリックした面と樹液面が一致した時だけ設置可
+        if (clickedFace != sapFacing) {
+            return null;
+        }
+
+        return this.defaultBlockState()
+                .setValue(FILL_LEVEL, 0)
+                .setValue(FACING, clickedFace);
+    }
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FILL_LEVEL, FACING);
@@ -48,12 +70,18 @@ public class SapCollectorBlock extends Block {
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         Direction facing = state.getValue(FACING);
+
         BlockPos attachedPos = pos.relative(facing.getOpposite());
         BlockState attachedState = level.getBlockState(attachedPos);
-        // 必ず接着先がmaple_sap_log
-        return attachedState.getBlock() == ModBlocks.MAPLE_SAP_LOG.get();
 
+        if (!attachedState.is(ModBlocks.MAPLE_SAP_LOG.get())) {
+            return false;
         }
+
+        Direction sapFacing = attachedState.getValue(MapleSapLogBlock.FACING);
+
+        return sapFacing == facing;
+    }
 
     @Override
     public void neighborChanged(BlockState state, net.minecraft.world.level.Level level, BlockPos pos, Block blockIn, BlockPos fromPos, boolean isMoving) {

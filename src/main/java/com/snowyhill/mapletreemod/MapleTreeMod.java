@@ -7,6 +7,7 @@ import com.snowyhill.mapletreemod.registry.*;
 import com.snowyhill.mapletreemod.worldgen.biome.ModOverworldRegion;
 import com.snowyhill.mapletreemod.worldgen.biome.ModSurfaceRuleData;
 import com.snowyhill.mapletreemod.worldgen.features.decorator.ModTreeDecorators;
+import com.snowyhill.mapletreemod.worldgen.features.trunkplacers.ModTrunkPlacerTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -55,6 +56,7 @@ public class MapleTreeMod
         ModBlockEntities.register(modEventBus);
 
         ModTreeDecorators.TREE_DECORATORS.register(modEventBus);
+        ModTrunkPlacerTypes.TRUNK_PLACER_TYPES.register(modEventBus);
         }
 
 

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "axis=y,facing=north": {
+      "model": "mapletreemod:block/maple_sap_log"
+    },
+    "axis=y,facing=east": {
+      "model": "mapletreemod:block/maple_sap_log",
+      "y": 90
+    },
+    "axis=y,facing=south": {
+      "model": "mapletreemod:block/maple_sap_log",
+      "y": 180
+    },
+    "axis=y,facing=west": {
+      "model": "mapletreemod:block/maple_sap_log",
+      "y": 270
+    }
+  }
+}

@@ -28,11 +28,21 @@ public  class ModBlockTagsProvider extends BlockTagsProvider {
                 ModBlocks.STRIPPED_MAPLE_WOOD.get()
         );
 
+        this.tag(BlockTags.SAPLINGS)
+                .add(
+                        ModBlocks.MAPLE_RED_SAPLING.get(),
+                        ModBlocks.MAPLE_ORANGE_SAPLING.get(),
+                        ModBlocks.MAPLE_YELLOW_SAPLING.get()
+                );
+
+
         this.tag(BlockTags.LEAVES)
                 .add(
                         ModBlocks.MAPLE_RED_LEAVES.get(),
-                        ModBlocks.MAPLE_ORANGE_LEAVES.get()
+                        ModBlocks.MAPLE_ORANGE_LEAVES.get(),
+                        ModBlocks.MAPLE_YELLOW_LEAVES.get()
                 );
+
 
         this.tag(BlockTags.LOGS)
                 .add(
@@ -94,22 +104,53 @@ public  class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.STAIRS).add(
                 ModBlocks.MAPLE_STAIRS.get()
         );
+
+        this.tag(BlockTags.WOODEN_STAIRS).add(
+                ModBlocks.MAPLE_STAIRS.get()
+        );
+
+
         this.tag(BlockTags.FENCES).add(
                 ModBlocks.MAPLE_FENCE.get()
         );
+
+        this.tag(BlockTags.WOODEN_FENCES).add(
+                ModBlocks.MAPLE_FENCE.get()
+        );
+
         this.tag(BlockTags.FENCE_GATES).add(
                 ModBlocks.MAPLE_FENCE_GATE.get()
         );
+
         this.tag(BlockTags.DOORS).add(
                 ModBlocks.MAPLE_DOOR.get()
           );
+
+        this.tag(BlockTags.WOODEN_DOORS).add(
+                ModBlocks.MAPLE_DOOR.get()
+        );
+
         this.tag(BlockTags.TRAPDOORS).add(
                 ModBlocks.MAPLE_TRAPDOOR.get()
         );
+
+        this.tag(BlockTags.WOODEN_TRAPDOORS).add(
+                ModBlocks.MAPLE_TRAPDOOR.get()
+        );
+
         this.tag(BlockTags.BUTTONS).add(
                 ModBlocks.MAPLE_BUTTON.get()
         );
+
+        this.tag(BlockTags.WOODEN_BUTTONS).add(
+                ModBlocks.MAPLE_BUTTON.get()
+        );
+
         this.tag(BlockTags.PRESSURE_PLATES).add(
+                ModBlocks.MAPLE_PRESSURE_PLATE.get()
+        );
+
+        this.tag(BlockTags.WOODEN_PRESSURE_PLATES).add(
                 ModBlocks.MAPLE_PRESSURE_PLATE.get()
         );
 

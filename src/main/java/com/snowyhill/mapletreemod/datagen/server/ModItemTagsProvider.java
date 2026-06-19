@@ -26,15 +26,34 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.copy(ModTags.Blocks.MAPLE_LOG,
                 ModTags.Items.MAPLE_LOG);
 
-        //バニラタグ
+        //バニラタグ。アイテムのレシピに反応させるために必要。
         this.copy(BlockTags.LOGS, ItemTags.LOGS);
-        this.copy(BlockTags.LEAVES, ItemTags.LEAVES);
+                this.copy(BlockTags.LEAVES, ItemTags.LEAVES);
         this.copy(BlockTags.LOGS_THAT_BURN, ItemTags.LOGS_THAT_BURN);
         //作業台などの「木材」を使うレシピに適用
         this.copy(BlockTags.PLANKS, ItemTags.PLANKS);
         this.copy(BlockTags.SLABS, ItemTags.SLABS);
         this.copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
-        //this.copy(BlockTags.SAPLINGS, ItemTags.SAPLINGS);
+        this.copy(BlockTags.STAIRS, ItemTags.STAIRS);
+        this.copy(BlockTags.WOODEN_STAIRS, ItemTags.WOODEN_STAIRS);
+        this.copy(BlockTags.FENCES, ItemTags.FENCES);
+        this.copy(BlockTags.WOODEN_FENCES, ItemTags.WOODEN_FENCES);
+        this.copy(BlockTags.FENCE_GATES, ItemTags.FENCE_GATES);
+
+        this.copy(BlockTags.DOORS, ItemTags.DOORS);
+        this.copy(BlockTags.WOODEN_DOORS, ItemTags.WOODEN_DOORS);
+
+        this.copy(BlockTags.TRAPDOORS, ItemTags.TRAPDOORS);
+
+        this.copy(BlockTags.WOODEN_PRESSURE_PLATES, ItemTags.WOODEN_PRESSURE_PLATES);
+
+        this.copy(BlockTags.WOODEN_TRAPDOORS, ItemTags.WOODEN_TRAPDOORS);
+
+        this.copy(BlockTags.BUTTONS, ItemTags.BUTTONS);
+        this.copy(BlockTags.WOODEN_BUTTONS, ItemTags.WOODEN_BUTTONS);
+
+
+        this.copy(BlockTags.SAPLINGS, ItemTags.SAPLINGS);
 
 
     }

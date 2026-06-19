@@ -39,33 +39,20 @@
       "upper_size": 2
     },
     "trunk_placer": {
-      "type": "minecraft:straight_trunk_placer",
+      "type": "mapletreemod:maple_sap_trunk_placer",
       "base_height": 5,
       "height_rand_a": 1,
-      "height_rand_b": 2
+      "height_rand_b": 2,
+      "sap_chance": 0.25
     },
     "trunk_provider": {
-      "type": "minecraft:weighted_state_provider",
-      "entries": [
-        {
-          "data": {
-            "Name": "mapletreemod:maple_log",
-            "Properties": {
-              "axis": "y"
-            }
-          },
-          "weight": 7
-        },
-        {
-          "data": {
-            "Name": "mapletreemod:maple_sap_log",
-            "Properties": {
-              "axis": "y"
-            }
-          },
-          "weight": 1
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "mapletreemod:maple_log",
+        "Properties": {
+          "axis": "y"
         }
-      ]
+      }
     }
   }
 }

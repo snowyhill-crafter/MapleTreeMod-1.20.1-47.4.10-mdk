@@ -62,7 +62,7 @@ public class ModBlocks {
     );
 
     public static final RegistryObject<Block> MAPLE_SAP_LOG = BLOCKS.register("maple_sap_log",
-            () -> new ModStrippableLogBlock(
+            () -> new MapleSapLogBlock(
                     BlockBehaviour.Properties.copy(Blocks.OAK_LOG),
                     () -> ModBlocks.STRIPPED_MAPLE_LOG.get()
             )

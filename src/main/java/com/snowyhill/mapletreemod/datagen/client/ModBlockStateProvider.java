@@ -87,11 +87,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         logBlock((RotatedPillarBlock) ModBlocks.STRIPPED_MAPLE_LOG.get());
         item(ModBlocks.STRIPPED_MAPLE_LOG);
 
-        axisBlock(
-                (RotatedPillarBlock) ModBlocks.MAPLE_SAP_LOG.get(),
-                modLoc("block/maple_sap_log"),     // 側面
-                modLoc("block/maple_log_top")      // 上下面
-        );
+        //axisBlock(
+        //        (RotatedPillarBlock) ModBlocks.MAPLE_SAP_LOG.get(),
+        //        modLoc("block/maple_sap_log"),     // 側面
+        //        modLoc("block/maple_log_top")      // 上下面
+        //);
 
         axisBlock((RotatedPillarBlock) ModBlocks.MAPLE_WOOD.get(),
                 blockTexture(ModBlocks.MAPLE_LOG.get()),
