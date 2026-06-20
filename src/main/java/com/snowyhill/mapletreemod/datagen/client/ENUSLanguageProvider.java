@@ -55,10 +55,12 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addItem(ModItems.MAPLE_SAP_BOTTLE, "Maple Sap Bottle");
         addItem(ModItems.MAPLE_SYRUP_BOTTLE, "Maple Syrup Bottle");
         addItem(ModItems.MAPLE_TAFFY, "Maple Taffy");
+        addItem(ModItems.MAPLE_COOKIE, "Maple Cookie");
         addBlock(ModBlocks.MAPLE_PANCAKE, "Maple Pancake");
 
         addEntityType(ModEntities.MOD_CHEST_BOAT, "Boat with Chest");
         add("creativetabs.Mod_tab", "mapletreemod");
+        add("biome.mapletreemod.maple_forest", "Maple Forest");
         
 
     }

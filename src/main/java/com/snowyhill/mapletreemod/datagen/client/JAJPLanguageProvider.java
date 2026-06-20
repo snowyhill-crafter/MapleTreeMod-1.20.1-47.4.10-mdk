@@ -56,11 +56,12 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addItem(ModItems.MAPLE_SAP_BOTTLE, "カエデの樹液入り瓶");
         addItem(ModItems.MAPLE_SYRUP_BOTTLE, "メイプルシロップ入り瓶");
         addItem(ModItems.MAPLE_TAFFY, "メイプルタフィー");
+        addItem(ModItems.MAPLE_COOKIE, "メイプルクッキー");
         addBlock(ModBlocks.MAPLE_PANCAKE, "メイプルパンケーキ");
 
         addEntityType(ModEntities.MOD_CHEST_BOAT, "チェスト付きのボート");
         add("creativetabs.Mod_tab", "カエデの木MOD");
-
+        add("biome.mapletreemod.maple_forest", "カエデの森");
 
     }
 }
