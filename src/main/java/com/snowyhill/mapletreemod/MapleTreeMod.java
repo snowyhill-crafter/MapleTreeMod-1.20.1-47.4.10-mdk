@@ -63,9 +63,11 @@ public class MapleTreeMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        //生成頻度
         event.enqueueWork(() -> {
             Regions.register(new ModOverworldRegion(
-                    new ResourceLocation(MapleTreeMod.MOD_ID, "overworld"),5
+                    new ResourceLocation(MapleTreeMod.MOD_ID, "overworld"),4
+
             ));
          //   SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD,
          //           MOD_ID, ModSurfaceRuleData.makeRules());

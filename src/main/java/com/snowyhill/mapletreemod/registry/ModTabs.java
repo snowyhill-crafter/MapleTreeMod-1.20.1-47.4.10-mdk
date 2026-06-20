@@ -26,7 +26,7 @@ public class ModTabs {
                         pOutput.accept(ModItems.MAPLE_ORANGE_SAPLING_ITEM.get());
                         pOutput.accept(ModItems.MAPLE_YELLOW_SAPLING_ITEM.get());
                         pOutput.accept(ModItems.MAPLE_LOG_ITEM.get());
-                        pOutput.accept(ModItems.MAPLE_SAP_LOG_ITEM.get());
+                        //pOutput.accept(ModItems.MAPLE_SAP_LOG_ITEM.get());
                         pOutput.accept(ModItems.STRIPPED_MAPLE_LOG_ITEM.get());
                         pOutput.accept(ModItems.MAPLE_WOOD_ITEM.get());
                         pOutput.accept(ModItems.STRIPPED_MAPLE_WOOD_ITEM.get());

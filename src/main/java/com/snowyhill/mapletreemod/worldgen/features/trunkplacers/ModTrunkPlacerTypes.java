@@ -15,4 +15,9 @@ public class ModTrunkPlacerTypes {
     public static final RegistryObject<TrunkPlacerType<MapleSapTrunkPlacer>> MAPLE_SAP_TRUNK_PLACER =
             TRUNK_PLACER_TYPES.register("maple_sap_trunk_placer",
                     () -> new TrunkPlacerType<>(MapleSapTrunkPlacer.CODEC));
+
+    public static final RegistryObject<TrunkPlacerType<MapleSapFancyTrunkPlacer>> MAPLE_SAP_FANCY_TRUNK_PLACER =
+            TRUNK_PLACER_TYPES.register("maple_sap_fancy_trunk_placer",
+                    () -> new TrunkPlacerType<>(MapleSapFancyTrunkPlacer.CODEC));
+
 }

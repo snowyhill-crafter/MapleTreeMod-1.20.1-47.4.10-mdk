@@ -86,6 +86,15 @@ public class ModBiomes {
                 ModPlacement.MAPLE_YELLOW_TREE
         );
 
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacement.MAPLE_RED_BIG_TREE);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacement.MAPLE_ORANGE_BIG_TREE);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacement.MAPLE_YELLOW_BIG_TREE);
+
         biomeBuilder.addFeature(
                 GenerationStep.Decoration.VEGETAL_DECORATION,
                 ModPlacement.MAPLE_FOREST_OAK_TREE

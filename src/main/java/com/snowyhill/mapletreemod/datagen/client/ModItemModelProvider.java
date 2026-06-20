@@ -60,7 +60,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.MAPLE_SAP_BOTTLE.get());
         basicItem(ModItems.MAPLE_SYRUP_BOTTLE.get());
-        basicItem(ModItems.MAPLE_TAFFY.get());
+        //basicItem(ModItems.MAPLE_TAFFY.get());
     }
 
     public void itemWithBlock(RegistryObject<Block> block) {

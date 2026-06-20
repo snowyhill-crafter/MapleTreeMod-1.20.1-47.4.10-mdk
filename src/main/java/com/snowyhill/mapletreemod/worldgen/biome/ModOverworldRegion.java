@@ -23,8 +23,7 @@ public class ModOverworldRegion extends Region {
         VanillaParameterOverlayBuilder builder = new VanillaParameterOverlayBuilder();
         new ParameterUtils.ParameterPointListBuilder()
                 .temperature(
-                        ParameterUtils.Temperature.COOL,
-                        ParameterUtils.Temperature.NEUTRAL
+                        ParameterUtils.Temperature.COOL
                 )
                 .humidity(
                         ParameterUtils.Humidity.NEUTRAL,

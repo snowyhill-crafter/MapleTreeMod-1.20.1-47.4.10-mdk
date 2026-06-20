@@ -42,6 +42,17 @@ public class ModPlacement {
                     new ResourceLocation(MapleTreeMod.MOD_ID, "maple_yellow_tree")
             );
 
+    public static final ResourceKey<PlacedFeature> MAPLE_RED_BIG_TREE =
+            registerPlacedKey("maple_red_big_tree");
+
+    public static final ResourceKey<PlacedFeature> MAPLE_ORANGE_BIG_TREE =
+            registerPlacedKey("maple_orange_big_tree");
+
+    public static final ResourceKey<PlacedFeature> MAPLE_YELLOW_BIG_TREE =
+            registerPlacedKey("maple_yellow_big_tree");
+
+
+
     public static final ResourceKey<PlacedFeature> MAPLE_FOREST_OAK_TREE =
             registerPlacedKey("maple_forest_oak_tree");
 
@@ -81,6 +92,33 @@ public class ModPlacement {
                         PlacementUtils.countExtra(1, 0.2f, 1),
                         //1チャンク当たりの本数、追加の確率、追加されるときの本数
                         ModBlocks.MAPLE_YELLOW_SAPLING.get()));
+
+        PlacementUtils.register(context, MAPLE_RED_BIG_TREE,
+                configuredFeatures.getOrThrow(ModFeatures.MAPLE_RED_BIG_TREE_KEY),
+                VegetationPlacements.treePlacement(
+                        RarityFilter.onAverageOnceEvery(8),
+                        ModBlocks.MAPLE_RED_SAPLING.get()
+                )
+        );
+
+        PlacementUtils.register(context, MAPLE_ORANGE_BIG_TREE,
+                configuredFeatures.getOrThrow(ModFeatures.MAPLE_ORANGE_BIG_TREE_KEY),
+                VegetationPlacements.treePlacement(
+                        RarityFilter.onAverageOnceEvery(8),
+                        ModBlocks.MAPLE_ORANGE_SAPLING.get()
+                )
+        );
+
+        PlacementUtils.register(context, MAPLE_YELLOW_BIG_TREE,
+                configuredFeatures.getOrThrow(ModFeatures.MAPLE_YELLOW_BIG_TREE_KEY),
+                VegetationPlacements.treePlacement(
+                        RarityFilter.onAverageOnceEvery(8),
+                        ModBlocks.MAPLE_YELLOW_SAPLING.get()
+                )
+        );
+
+
+
 
         PlacementUtils.register(
                 context,

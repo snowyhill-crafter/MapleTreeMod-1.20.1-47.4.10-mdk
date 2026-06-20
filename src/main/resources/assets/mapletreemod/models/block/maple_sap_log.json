@@ -17,7 +17,7 @@
           "texture": "#end"
         },
         "north": {
-          "texture": "sap"
+          "texture": "#sap"
         },
         "south": {
           "texture": "#side"

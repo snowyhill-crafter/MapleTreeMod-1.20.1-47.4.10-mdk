@@ -12,6 +12,11 @@ public class MapleRedTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource random, boolean hasFlowers) {
+        if (random.nextFloat() < 0.10F) {
+            return ModFeatures.MAPLE_RED_BIG_TREE_KEY;
+        }
         return ModFeatures.MAPLE_RED_TREE_KEY;
     }
+
+
 }
