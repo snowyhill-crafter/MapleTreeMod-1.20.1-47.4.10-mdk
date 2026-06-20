@@ -131,7 +131,7 @@ public class ModRecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(
                         RecipeCategory.FOOD,
                         ModItems.MAPLE_TAFFY.get(),
-                        3
+                        4
                 )
                 .requires(ModItems.MAPLE_SYRUP_BOTTLE.get())
                 .requires(Items.SNOWBALL)
@@ -142,7 +142,14 @@ public class ModRecipeProvider extends RecipeProvider {
                 )
                 .save(pRecipeOutput);
 
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.MAPLE_COOKIE.get(),
+                        8
+                )
+                .pattern("WMW")
+                .define('M', ModItems.MAPLE_SYRUP_BOTTLE.get())
+                .define('W', Items.WHEAT)
+                .unlockedBy("has_maple_syrup_bottle", has(ModItems.MAPLE_SYRUP_BOTTLE.get()))
+                .save(pRecipeOutput);
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModBlocks.MAPLE_PANCAKE.get())

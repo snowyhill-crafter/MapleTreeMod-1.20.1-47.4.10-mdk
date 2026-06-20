@@ -60,6 +60,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.MAPLE_SAP_BOTTLE.get());
         basicItem(ModItems.MAPLE_SYRUP_BOTTLE.get());
+        basicItem(ModItems.MAPLE_COOKIE.get());
         //basicItem(ModItems.MAPLE_TAFFY.get());
     }
 

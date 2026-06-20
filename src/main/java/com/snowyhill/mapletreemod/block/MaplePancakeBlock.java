@@ -106,11 +106,13 @@ public class MaplePancakeBlock extends Block {
 
         // 最初に欠ける象限のインデックス（NE=0 を基準に、向きに応じて回す）
         // NORTH: NE(0), EAST: SE(1), SOUTH: SW(2), WEST: NW(3)
+        // 食べる順：右下 → 左下 → 左上 → 右上
+// NORTH: SE(1), EAST: SW(2), SOUTH: NW(3), WEST: NE(0)
         int start = switch (f) {
-            case EAST -> 1;
-            case SOUTH -> 2;
-            case WEST -> 3;
-            default -> 0; // NORTH
+            case EAST -> 2;
+            case SOUTH -> 3;
+            case WEST -> 0;
+            default -> 1; // NORTH
         };
 
         // bites 回だけ時計回りに欠けていく → 欠けた象限を removed[] にマーキング

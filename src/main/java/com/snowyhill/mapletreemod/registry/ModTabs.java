@@ -56,6 +56,7 @@ public class ModTabs {
                         pOutput.accept(ModItems.MAPLE_SAP_BOTTLE.get());
                         pOutput.accept(ModItems.MAPLE_SYRUP_BOTTLE.get());
                         pOutput.accept(ModItems.MAPLE_TAFFY.get());
+                        pOutput.accept(ModItems.MAPLE_COOKIE.get());
                         pOutput.accept(ModItems.MAPLE_PANCAKE_ITEM.get());
                     }))
                     .build());

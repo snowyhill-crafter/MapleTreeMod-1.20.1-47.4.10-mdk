@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "mapletreemod:maple_syrup_bottle"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    "WMW"
+  ],
+  "result": {
+    "count": 8,
+    "item": "mapletreemod:maple_cookie"
+  },
+  "show_notification": true
+}

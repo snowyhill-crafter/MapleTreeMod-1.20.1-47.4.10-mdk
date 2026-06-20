@@ -183,6 +183,16 @@ public class ModItems {
             )
     );
 
+    public static final RegistryObject<Item> MAPLE_COOKIE = ITEMS.register(
+            "maple_cookie",
+            () -> new Item(new Item.Properties()
+                    .food(new FoodProperties.Builder()
+                            .nutrition(2)          // 満腹度 +2（肉1個分）
+                            .saturationMod(0.2F)   // 隠し満腹度
+                             .build())
+            )
+    );
+
     public static final RegistryObject<Item> MAPLE_PANCAKE_ITEM = ITEMS.register("maple_pancake",
             () -> new BlockItem(ModBlocks.MAPLE_PANCAKE.get(), new Item.Properties()
                     .stacksTo(1)
