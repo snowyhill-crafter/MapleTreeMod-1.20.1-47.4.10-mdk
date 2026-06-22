@@ -1,4 +1,5 @@
 {
+  "biome.mapletreemod.maple_forest": "カエデの森",
   "block.mapletreemod.maple_button": "カエデのボタン",
   "block.mapletreemod.maple_door": "カエデのドア",
   "block.mapletreemod.maple_fence": "カエデのフェンス",
@@ -30,6 +31,7 @@
   "entity.mapletreemod.mod_chest_boat": "チェスト付きのボート",
   "item.mapletreemod.maple_boat": "カエデのボート",
   "item.mapletreemod.maple_chest_boat": "チェスト付きのカエデのボート",
+  "item.mapletreemod.maple_cookie": "メイプルクッキー",
   "item.mapletreemod.maple_sap_bottle": "カエデの樹液入り瓶",
   "item.mapletreemod.maple_syrup_bottle": "メイプルシロップ入り瓶",
   "item.mapletreemod.maple_taffy": "メイプルタフィー"

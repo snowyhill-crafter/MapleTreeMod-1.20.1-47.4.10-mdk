@@ -1,4 +1,5 @@
 {
+  "biome.mapletreemod.maple_forest": "Maple Forest",
   "block.mapletreemod.maple_button": "Maple Button",
   "block.mapletreemod.maple_door": "Maple Door",
   "block.mapletreemod.maple_fence": "Maple Fence",
@@ -30,6 +31,7 @@
   "entity.mapletreemod.mod_chest_boat": "Boat with Chest",
   "item.mapletreemod.maple_boat": "Maple Boat",
   "item.mapletreemod.maple_chest_boat": "Maple Chest Boat",
+  "item.mapletreemod.maple_cookie": "Maple Cookie",
   "item.mapletreemod.maple_sap_bottle": "Maple Sap Bottle",
   "item.mapletreemod.maple_syrup_bottle": "Maple Syrup Bottle",
   "item.mapletreemod.maple_taffy": "Maple Taffy"
